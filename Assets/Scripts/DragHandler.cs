@@ -25,6 +25,7 @@ public class DragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 
     public void OnBeginDrag(PointerEventData eventDada)
     {
+        // TODO : Play audio
         objBeingDragged = gameObject;
         startPosition = transform.position;
         startParent = transform.parent;
@@ -41,6 +42,7 @@ public class DragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 
     public void OnEndDrag(PointerEventData eventData)
     {
+        // TODO 2 : Play audio
         objBeingDragged = null;
         canvasGroup.blocksRaycasts = true;
 

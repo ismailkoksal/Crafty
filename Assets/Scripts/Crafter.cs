@@ -17,7 +17,8 @@ public class Crafter : MonoBehaviour
     public Recipe[] recipes;
 
     public Transform resultsParent;
-    public GameObject itemPrefab;
+    [SerializeField]
+    private GameObject itemPrefab;
     public GameObject ghostItemPrefab;
 
     private void Start()

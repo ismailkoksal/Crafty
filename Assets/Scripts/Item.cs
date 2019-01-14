@@ -7,6 +7,5 @@ public class Item : ScriptableObject
 {
     public Sprite icon;
 
-    [HideInInspector]
-    public GameObject itemObject;
+    
 }

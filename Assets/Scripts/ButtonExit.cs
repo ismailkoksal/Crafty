@@ -13,6 +13,10 @@ public class ButtonExit : MonoBehaviour
 
     void OnClick()
     {
+        #if UNITY_EDITOR
+        EditorApplication.isPlaying = false;
+        #else
         Application.Quit();
+        #endif
     }
 }

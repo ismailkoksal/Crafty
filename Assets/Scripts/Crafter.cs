@@ -80,6 +80,8 @@ public class Crafter : MonoBehaviour
     {
         GameObject itemObj = Instantiate(itemPrefab, resultsParent);
         ItemDisplay display = itemObj.GetComponent<ItemDisplay>();
+        itemObj.AddComponent<ItemClick>();
+
         if (display != null)
             display.Setup(item);
     }

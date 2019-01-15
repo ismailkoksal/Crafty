@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,7 +6,8 @@ public class SettingsMenu : MonoBehaviour
 {
     Resolution[] resolutions;
 
-    public Dropdown resolutionDropdown;
+    [SerializeField]
+    private Dropdown resolutionDropdown;
 
     void Start()
     {

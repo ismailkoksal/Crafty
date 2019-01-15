@@ -11,7 +11,7 @@ public class DragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
         return objBeingDragged.GetComponent<ItemDisplay>().item;
     }
 
-    Vector3 startPosition;
+    Vector3 startPosition; 
     Transform startParent;
 
     Transform itemDraggerParent;

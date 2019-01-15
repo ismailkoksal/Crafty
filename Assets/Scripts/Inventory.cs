@@ -24,6 +24,15 @@ public class Inventory : MonoBehaviour
             AddItem(item, true);
         }
     }
+
+    public void ReturnItem(GameObject returnedItem)
+    {
+        if (returnedItem.GetComponent<ItemClick>() != null)
+        {
+            Destroy(returnedItem.GetComponent<ItemClick>());
+        }
+        itemPool.GetComponent<ItemPool>().AddItem(returnedItem);
+    }
     
     public void AddItem(Item item, bool startItem)
     {

@@ -14,14 +14,18 @@ public class CrafterSlot : MonoBehaviour, IDropHandler
     {
         Debug.Log("OnDrop");
 
-        if (!itemObj)
+        if (itemObj != null)
         {
-            itemObj = DragHandler.objBeingDragged;
-            itemObj.transform.SetParent(transform);
-            itemObj.transform.position = transform.position;
-
-            Crafter.instance.AddItem(DragHandler.GetItemBeingDragged(), slot);
+            Inventory.instance.ReturnItem(itemObj);
+            Crafter.instance.RemoveItem(slot);
+            itemObj = null;
         }
+
+        itemObj = DragHandler.objBeingDragged;
+        itemObj.transform.SetParent(transform);
+        itemObj.transform.position = transform.position;
+
+        Crafter.instance.AddItem(DragHandler.GetItemBeingDragged(), slot);
     }
 
     void Update()
